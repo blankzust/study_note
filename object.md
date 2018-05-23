@@ -341,8 +341,9 @@ Object.getOwnPropertyDescriptor(o, 'x') // 打印出{value: 1, writable: true, e
 * configurable：描述属性是否可配置
 
   * 若configurable为false时
+    * getter、setter方法定义的属性无法转换为常规属性，也不能将常规属性转换为存取器属性
+    * 可以将属性的writable从true修改为false，但不能从false改为true
+    * 不能修改可配置性和可枚举性
 
-    * getter、setter方法定义的属性无法转换为常规属性
-
-      
+  
 
